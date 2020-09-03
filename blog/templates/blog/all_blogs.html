@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    {% block content%}
+
+    <h3>All remaning blogs </h3>
+
+    <p>{% for blog in all_blogs  %}</p>
+    <h2>{{ blog.title }}</h2>
+    <p>{{ blog.discription }} </p>
+    <p>{{ blog.date}}</p>
+    <p>{% endfor%}</p>
+
+    {% endblock %}
+
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'portfolio_app/base.html' %}
+
+
+{% block content %}
+<h1>All blogs are here</h1>
+<p>{% for blog in all_blogs  %}</p>
+
+<a href="{% url 'detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+
+<p>{{ blog.discription }} </p>
+<p>{{ blog.date}}</p>
+
+<p>{% endfor%}</p>
+
+<h5></h5>
+<a href="{%url 'allBlogs'%}">Show all blog</a>
+{% endblock %}

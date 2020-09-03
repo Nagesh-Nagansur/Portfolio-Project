@@ -1,0 +1,42 @@
+{% extends 'portfolio_app/base.html' %}
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+
+
+    <title>Home-Page</title>
+  </head>
+
+
+  <body>
+
+{% block  content %}
+
+  <h1>Nagesh Nagansur Here</h1>
+
+
+    <img src="{% static 'portfolio_app/images/profile.jpg.jpg' %}" alt="Not found">
+<!--
+    <a href="{% static 'portfolio_app/resume/Nagesh_Nagansur_CV.pdf' %}" id='image'>Resume</a> -->
+
+    <!-- <h3>  <a href="{% url 'blog-home'  %}">Blogs</a> </h3> -->
+
+  {%  for info in data  %}
+
+      <h1>{{ info.title}}</h1>
+
+      <h2> {{  info.discription }}</h2>
+
+      <a href="{{ info.link }}"><img src="{{ info.image.url  }}" alt="Not found" ></a>
+
+  {%  endfor  %}
+
+{% endblock %}
+
+  </body>
+</html>
